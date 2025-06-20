@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Pierwiastków</title>
+    <link rel="stylesheet" href="kalkulator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="theme-toggle-btn" title="Zmień motyw">
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zm-11.457 0a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 01-1.06 0l-1.59-1.59a.75.75 0 111.06-1.06l1.59 1.59a.75.75 0 010 1.06zM12 21a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0V20.25a.75.75 0 01-.75.75zM5.106 17.894a.75.75 0 010-1.06l1.59-1.59a.75.75 0 111.06 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM4.5 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H5.25a.75.75 0 01-.75-.75z"/></svg>
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24" style="display: none;"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69a.75.75 0 01.981.981A10.503 10.503 0 0112 22.5a10.5 10.5 0 01-10.5-10.5c0-4.368 2.667-8.112 6.46-9.672a.75.75 0 01.818.162z" clip-rule="evenodd" /></svg>
+    </button>
+    
+    <main class="container">
+        <h1>Kalkulator Pierwiastków</h1>
+
+        <div class="card calculator">
+            <h3>Kalkulator Odporności UV</h3>
+            <input type="text" id="compound-input" placeholder="Wpisz wzór związku (np. H2O)">
+            <button id="calculate-btn">Oblicz</button>
+            <div id="calculator-result"></div>
+        </div>
+
+        <div class="card search-section">
+            <h3>Baza Danych Pierwiastków</h3>
+            <input type="search" id="search-input" placeholder="Szukaj po nazwie lub symbolu...">
+            <div id="element-list">
+                </div>
+        </div>
+    </main>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-content">
+            <button id="modal-close-btn" title="Zamknij">&times;</button>
+            <div id="modal-details">
+                </div>
+        </div>
+    </div>
+
+    <script src="kalkulator.js"></script>
+
+</body>
+</html>
